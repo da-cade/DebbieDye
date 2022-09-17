@@ -77,7 +77,7 @@
 
     <div class="spacer-20" v-if="!mobile"></div>
     <div class="spacer-10 d-xl-block"></div>
-    <div class="spacer-10" v-if="mobile"></div>
+    <div class="spacer-10"></div>
     <div class="contracts position-relative row h-sm-50">
       <div class="col-lg-6">
         <div class="card-container-left">
@@ -187,7 +187,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "src/public/assets/scss/_variables.scss";
+@import "./public/assets/scss/_variables.scss";
 
 @keyframes fadeIn {
   0% {
@@ -288,7 +288,7 @@ export default {
       rgba(255, 255, 255, 0.108),
       rgba(255, 255, 255, 0.314)
     ),
-    url("src/public/assets/img/Ocean.jpeg");
+    url("/public/assets/img/Ocean.jpeg");
   background-size: cover;
 }
 

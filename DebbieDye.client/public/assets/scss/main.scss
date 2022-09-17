@@ -1,0 +1,165 @@
+@import "./_variables.scss";
+@import "bootstrap";
+@import "./_overrides.scss";
+@import "./utilities.scss";
+@import "./loaders.scss";
+
+
+@font-face {
+  font-family: "nycd";
+  font-display: auto;
+  src: url("../public/assets/fonts/static/NothingYouCouldDo-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "quicksand";
+  font-display: auto;
+  src: url("../public/assets/fonts/static/Quicksand-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+
+main {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 2px;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+p, span, b {
+  font-family: "quicksand"
+}
+
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.6);
+  background-size: 100%;
+  z-index: -1;
+}
+
+@media(max-width: 768px){
+  .parallax::after{
+    transform: translateZ(-1px) scale(1.5);
+  }
+}
+
+.bg::after {
+  background: linear-gradient(rgba(255, 255, 255, 0.108), rgba(255, 255, 255, 0.114)), url("../public/assets/img/Ocean.jpeg");
+  background-size: cover;
+}
+
+.spacer-10 {
+  height: 10vh;
+}
+.spacer-20 {
+  height: 20vh;
+}
+.spacer-30 {
+  height: 30vh;
+}
+
+.min-width {
+  width: min-content;
+}
+
+.tagline {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 4rem;
+}
+
+.before-enter {
+  opacity: 0;
+  transform: translateY(30%);
+  transition: all 0.8s ease;
+}
+
+.enter {
+  opacity: 1;
+  transition-delay: 0.1s;
+  transform: translateY(0);
+}
+
+.upon-exit {
+  opacity: 1;
+  transform: translateY(100em);
+}
+
+h1 {
+  font-size: 5em;
+  font-family: "Unna", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+select {
+  &:not(:placeholder-shown) {
+    &:valid {
+      border: 1px solid $success;
+    }
+    &:invalid {
+      border: 1px solid $danger;
+    }
+  }
+}
+
+form:invalid button[type="submit"] {
+  filter: grayscale(1);
+  pointer-events: none;
+}
+
+
+/* NOTE Don't include this with imports */
+
+// targets for svg animations
+svg {
+  line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  @media (max-width: 768px){
+    display: none;
+  }
+}
+
+.dashAnimation{
+  animation: dash 1.5s ease-in forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+// styling for swiper elements
+.mySwiper {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom:auto;
+    position: fixed;
+  }
+  .swiper-pagination-bullet-active {
+    background: orange;
+  }
+}

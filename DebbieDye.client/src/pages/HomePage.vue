@@ -29,5 +29,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "src/public/assets/scss/_variables.scss";
+@import "./public/assets/scss/_variables.scss";
 </style>

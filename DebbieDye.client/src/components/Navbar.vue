@@ -119,7 +119,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "src/public/assets/scss/_variables.scss";
+@import "./public/assets/scss/_variables.scss";
 
 .navbar {
   min-height: 60px;

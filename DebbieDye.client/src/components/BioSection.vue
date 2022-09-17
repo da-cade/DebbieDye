@@ -24,7 +24,7 @@
       </div>
       <div class="col-12 image-holder">
         <img
-          src="../public/assets/img/debbie-removebg-preview-2.png"
+          src="/public/assets/img/debbie-removebg-preview-2.png"
           alt="debbie headshot image"
           class="head-img"
         />
@@ -74,7 +74,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "src/public/assets/scss/_variables.scss";
+@import "./public/assets/scss/_variables.scss";
 
 .no-parallax {
   z-index: 2;

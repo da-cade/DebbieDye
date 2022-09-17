@@ -84,7 +84,7 @@
         </swiper>
       </div>
     </div>
-    <div class="spacer-10 bg-light"></div>
+    <div class="spacer-10"></div>
   </div>
 </template>
 
@@ -112,7 +112,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "src/public/assets/scss/_variables.scss";
+@import "./public/assets/scss/_variables.scss";
 .no-parallax {
   position: relative;
   z-index: 2;
